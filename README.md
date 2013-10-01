@@ -1,6 +1,6 @@
 # romcheg's vim settings
 
-This repository contains my personal vim setting.
+This repository contains my personal vim settings.
 
 
 ## Installation
