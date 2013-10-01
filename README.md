@@ -9,14 +9,18 @@ If you want to install the settings just follow the steps:
 
 1. Clone the repository to your home folder and initialize Vundle:
 
-    git clone git@github.com:prykhodchenko/vim-settings.git ~/.vim
+    ```git clone git@github.com:prykhodchenko/vim-settings.git ~/.vim
     cd ~/.vim
     git submodule init
     git submodule update
 
+    ```
+
 2. Create a symlink for Vim configuration file:
 
-    ln -s ~/.vim/vimrc ~/.vimrc
+    ```ln -s ~/.vim/vimrc ~/.vimrc
+
+    ```
 
 3. Enjoy ;)
 
