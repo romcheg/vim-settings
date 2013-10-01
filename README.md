@@ -23,7 +23,7 @@ If you want to install the settings just follow the steps:
     ```
 
 3. Now start Vim and skip all the errors.
-4. Run :BundleInstall to install all required plugins.
+4. Run ```:BundleInstall``` to install all required plugins.
 5. Enjoy ;)
 
 
