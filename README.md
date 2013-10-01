@@ -1,9 +1,9 @@
-## romcheg's vim settings
+# romcheg's vim settings
 
 This repository contains my personal vim setting.
 
 
-# Installation
+## Installation
 
 If you want to install the settings just follow the steps:
 
@@ -25,7 +25,7 @@ If you want to install the settings just follow the steps:
 3. Enjoy ;)
 
 
-# License
+## License
 
 Everything in this repository is distributed AS IS and under WTFPL license.
 More details about licensing can be found in [LICENSE](https://github.com/prykhodchenko/vim-settings/blob/master/LICENSE) file.
