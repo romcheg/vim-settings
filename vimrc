@@ -70,7 +70,7 @@ set cursorcolumn
 set cursorline
 set expandtab
 set guifont=Andale\ Mono:h13
-set guioptions-=L  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar even from NERDTree
 set guioptions-=r  "remove right-hand scroll bar
 set nocompatible
 set number
