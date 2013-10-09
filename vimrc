@@ -32,6 +32,10 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 Bundle 'klen/python-mode'
+Bundle 'tpope/vim-fugitive'
+Bundle 'bling/vim-airline'
+Bundle 'kien/ctrlp.vim'
+
 filetype plugin indent on     " required!
 
 :function! StartUp()
@@ -51,6 +55,9 @@ let g:pymode_rope_autocomplete_map = '<tab>'
 
 " Enable python folding
 let g:pymode_folding = 0
+
+" Enable virtualenv support
+let g:pymode_virtualenv = 1
 
 " Don't show .pyc in the Tree
 let NERDTreeIgnore=['\.pyc$']
