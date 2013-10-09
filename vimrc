@@ -32,6 +32,10 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 Bundle 'klen/python-mode'
+Bundle 'tpope/vim-fugitive'
+Bundle 'bling/vim-airline'
+Bundle 'kien/ctrlp.vim'
+
 filetype plugin indent on     " required!
 
 :function! StartUp()
