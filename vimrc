@@ -56,6 +56,9 @@ let g:pymode_rope_autocomplete_map = '<tab>'
 " Enable python folding
 let g:pymode_folding = 0
 
+" Enable virtualenv support
+let g:pymode_virtualenv = 1
+
 " Don't show .pyc in the Tree
 let NERDTreeIgnore=['\.pyc$']
 
