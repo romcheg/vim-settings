@@ -29,12 +29,14 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
+
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/nerdtree'
-Bundle 'klen/python-mode'
-Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
+Bundle 'jimenezrick/vimerl'
 Bundle 'kien/ctrlp.vim'
+Bundle 'klen/python-mode'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
 
 filetype plugin indent on     " required!
 
