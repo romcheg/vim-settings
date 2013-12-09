@@ -80,6 +80,7 @@ set cursorline
 set expandtab
 set guifont=Ubuntu\ Mono\ 13
 set guioptions-=L  "remove left-hand scroll bar even from NERDTree
+set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set nocompatible
 set number
