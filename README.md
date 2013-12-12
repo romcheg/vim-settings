@@ -10,7 +10,7 @@ If you want to install the settings just follow the steps:
 1. Clone the repository to your home folder and initialize Vundle:
 
     ```
-    git clone https://github.com/prykhodchenko/vim-settings.git ~/.vim
+    git clone https://github.com/romcheg/vim-settings.git ~/.vim
     cd ~/.vim
     git submodule init
     git submodule update
