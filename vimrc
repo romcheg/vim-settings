@@ -1,6 +1,6 @@
 "            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 "                    Version 2, December 2004
-" 
+"
 " Everyone is permitted to copy and distribute verbatim or modified
 " copies of this license document, and changing it is allowed as long
 " as the name is changed.
@@ -14,10 +14,10 @@
 " PARTICULAR PURPOSE. You are solely responsible for determining the
 " appropriateness of using or redistributing the Work and assume any
 " risks associated with Your exercise of permissions under this License.
-"  
+"
 "            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 "   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-" 
+"
 "  0. You just DO WHAT THE FUCK YOU WANT TO.
 
 
@@ -27,7 +27,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 Bundle 'altercation/vim-colors-solarized'
@@ -49,8 +49,8 @@ endfunction
 autocmd VimEnter * call StartUp()
 autocmd TabEnter * call StartUp()
 
-" Disable pylint checking every save
-let g:pymode_lint_write = 0
+" Enable pylint checking every save
+let g:pymode_lint_write = 1
 
 " Re-map code completion to Tab key
 let g:pymode_rope_autocomplete_map = '<tab>'
