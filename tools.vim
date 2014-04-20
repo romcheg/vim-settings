@@ -34,4 +34,5 @@ function DetectOS()
                 return d
             endif
         endfor
+    endif
 endfunction
