@@ -67,26 +67,16 @@ let NERDTreeIgnore=['\.pyc$']
 " Don't know what that means
 imap <buffer><Tab> <M-/>
 
+" Be transparent in the terminal mode
 let g:solarized_termtrans = 1
 
-colorscheme solarized
-set autoindent
-set background=dark
-set bs=2
-set cc=79
+" Set up fonts for GUI mode for different operating systems
+if has("gui_macvim")
+      set guifont=Monaco:h13
+  endif
+
+source ~/.vim/common_settings.vim
+
 set clipboard=unnamed
-set cursorcolumn
-set cursorline
-set expandtab
 set guifont=Ubuntu\ Mono\ 13
-set guioptions-=L  "remove left-hand scroll bar even from NERDTree
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
 set nocompatible
-set number
-set shiftwidth=4
-set showmatch
-set smarttab
-set softtabstop=4
-set tabstop=4
-syn on
