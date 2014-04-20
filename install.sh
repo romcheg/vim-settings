@@ -1,11 +1,11 @@
 #! /bin/sh
 #             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 #                     Version 2, December 2004
-# 
+#
 #  Everyone is permitted to copy and distribute verbatim or modified
 #  copies of this license document, and changing it is allowed as long
 #  as the name is changed.
-# 
+#
 #  Disclaimer of Warranty. Unless required by applicable law or
 #  agreed to in writing, Licensor provides the Work (and each
 #  Contributor provides its Contributions) on an AS IS BASIS,
@@ -124,15 +124,16 @@ fi
 install
 
 echo ""
+echo "=========================================================="
 echo "Vim settings was installed!"
 
-if [ -n "BACKUP_DIR" ]; then
-    echo "=========================================================="
-    echo "Old configuration files were saved to " $BACKUP_DIR
+
+if [ -n "$BACKUP_DIR" ]; then
+    echo "Old configuration files were saved to "$BACKUP_DIR
 fi
 
 echo "Now you can run Vim without arguments and let it configure its plugins."
-echo "=========================================================="
 echo "Thank you for using my settings!"
+echo "=========================================================="
 
 exit 0
