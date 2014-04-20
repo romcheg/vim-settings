@@ -20,10 +20,16 @@
 "
 "  0. You just DO WHAT THE FUCK YOU WANT TO.
 
-source ~/.vim/plugins.vim
-source ~/.vim/rc.vim
-source ~/.vim/common_settings.vim
-source ~/.vim/fonts.vim
-source ~/.vim/keys.vim
-source ~/.vim/python.vim
+" This scripts works for every new tab or window.
+
+function! StartFileTree()
+    " Starts NERDTree for any new window or tab that
+    " was started without a specific file.
+    if 0 == argc()
+        NERDTree
+    end
+endfunction
+
+autocmd VimEnter * call StartFileTree()
+autocmd TabEnter * call StartFileTree()
 
