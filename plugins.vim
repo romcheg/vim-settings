@@ -20,45 +20,24 @@
 "
 "  0. You just DO WHAT THE FUCK YOU WANT TO.
 
-source ~/.vim/plugins.vim
+" This script configures Vundle and specifies required plugins
 
-:function! StartUp()
-    if 0 == argc()
-        NERDTree
-    end
-endfunction
+filetype off                   " required!
 
-autocmd VimEnter * call StartUp()
-autocmd TabEnter * call StartUp()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-" Enable pylint checking every save
-let g:pymode_lint_write = 1
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
 
-" Re-map code completion to Tab key
-let g:pymode_rope_autocomplete_map = '<tab>'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'bling/vim-airline'
+Bundle 'jimenezrick/vimerl'
+Bundle 'kien/ctrlp.vim'
+Bundle 'klen/python-mode'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
 
-" Enable python folding
-let g:pymode_folding = 0
+filetype plugin indent on     " required!
 
-" Enable virtualenv support
-let g:pymode_virtualenv = 1
-
-" Don't show .pyc in the Tree
-let NERDTreeIgnore=['\.pyc$']
-
-" Don't know what that means
-imap <buffer><Tab> <M-/>
-
-" Be transparent in the terminal mode
-let g:solarized_termtrans = 1
-
-" Set up fonts for GUI mode for different operating systems
-if has("gui_macvim")
-      set guifont=Monaco:h13
-  endif
-
-source ~/.vim/common_settings.vim
-
-set clipboard=unnamed
-set guifont=Ubuntu\ Mono\ 13
-set nocompatible
