@@ -43,7 +43,7 @@ VIM_EXECUTABLE=vim
 # script exection, if not available.
 #
 # $1: App executable to run.
-function assert_available() {
+function assert_available {
     $1 --version 2>&1 >/dev/null 
     NOT_AVAILABLE=$?
 
@@ -56,7 +56,7 @@ function assert_available() {
 
 # Clones the settings from the repository and creates a symlink.
 # Assumes that the environment is clean.
-function install() {
+function install {
     echo "Obtaining the settings..."
     $GIT_EXECUTABLE clone $REPO_ADDRESS $VIM_DIRECTORY
     
@@ -73,7 +73,7 @@ function install() {
 
 
 # Backs up previous settings.
-function backup () {
+function backup {
     echo "Creating a back up..."
 
     BACKUP_DIR=`mktemp -d $BACKUP_LOCATION.XXX`
@@ -84,7 +84,7 @@ function backup () {
 
 
 # Cleans up a previuos configuration.
-function cleanup() {
+function cleanup {
     echo "Cheaning up the previous installation."
     rm -rf $VIM_DIRECTORY
     rm -rf $VIMRC
@@ -102,7 +102,7 @@ if [ -d $VIM_DIRECTORY ] || [ -f $VIMRC ]; then
     echo "You can either stop right now or choose to relpace it with the new one."
     echo "If you choose to continue, the old configuration will be backed up and replaced with the new one."
     
-    read -p "Would you like to continue (y/N)? " CHOICE
+    read -p "Would you like to continue (y/N)? " CHOICE < /dev/tty
 
     case "$CHOICE" in 
       y|Y )

@@ -7,20 +7,20 @@ This repository contains my personal vim settings.
 
 If you want to install the settings just follow the steps:
 
-1. Clone the repository to your home folder:
+1. GNU/Linux, OS X, or other unix-like operating system:
 
     ```
-    git clone https://github.com/romcheg/vim-settings.git ~/.vim
+    curl -L http://install_vim.romcheg.me
     ```
 
-2. Create a symlink for Vim configuration file:
+    or with wget
 
     ```
-    ln -s ~/.vim/vimrc ~/.vimrc
+    curl -L http://install_vim.romcheg.me
     ```
 
-3. Now start Vim and wait until it initialized itself for the first time.
-4. Enjoy ;)
+2. Now start Vim and wait until it initialized itself for the first time.
+3. Enjoy ;)
 
 
 ## License
