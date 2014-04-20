@@ -20,34 +20,17 @@
 "
 "  0. You just DO WHAT THE FUCK YOU WANT TO.
 
-source ~/.vim/plugins.vim
-source ~/.vim/python.vim
+" This script configures everything for convenient Python development.
 
-:function! StartUp()
-    if 0 == argc()
-        NERDTree
-    end
-endfunction
+" Enable pylint checking every save
+let g:pymode_lint_write = 1
 
-autocmd VimEnter * call StartUp()
-autocmd TabEnter * call StartUp()
+" Re-map code completion to Tab key
+let g:pymode_rope_autocomplete_map = '<tab>'
 
-" Don't show .pyc in the Tree
-let NERDTreeIgnore=['\.pyc$']
+" Enable python folding
+let g:pymode_folding = 0
 
-" Don't know what that means
-imap <buffer><Tab> <M-/>
+" Enable virtualenv support
+let g:pymode_virtualenv = 1
 
-" Be transparent in the terminal mode
-let g:solarized_termtrans = 1
-
-" Set up fonts for GUI mode for different operating systems
-if has("gui_macvim")
-      set guifont=Monaco:h13
-endif
-
-source ~/.vim/common_settings.vim
-
-set clipboard=unnamed
-set guifont=Ubuntu\ Mono\ 13
-set nocompatible
