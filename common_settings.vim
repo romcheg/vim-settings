@@ -28,6 +28,9 @@ set cursorcolumn "hightlight a column under the cursor
 set cursorline "hightlight a line under the cursor
 set number "switch line number on
 syn on "switch syntax highlight on
+let NERDTreeIgnore=['\.pyc$'] "don't show .pyc in the Tree
+let g:solarized_termtrans = 1 "be transparent in the terminal mode
+
 
 " Set common editing options
 set autoindent "follow the indentation from the previous line
@@ -38,6 +41,7 @@ set showmatch "show matching braces
 set smarttab "use TAB for indentation
 set softtabstop=4 "allow removing spaces as tabs
 set tabstop=4 "specify the width of a tab
+
 
 " Set options specific to GUI implementations of Vim
 set guioptions-=L  "remove left-hand scroll bar even from NERDTree

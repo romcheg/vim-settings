@@ -23,6 +23,7 @@
 source ~/.vim/plugins.vim
 source ~/.vim/python.vim
 source ~/.vim/keys.vim
+source ~/.vim/common_settings.vim
 
 :function! StartUp()
     if 0 == argc()
@@ -33,19 +34,11 @@ endfunction
 autocmd VimEnter * call StartUp()
 autocmd TabEnter * call StartUp()
 
-" Don't show .pyc in the Tree
-let NERDTreeIgnore=['\.pyc$']
-
-
-" Be transparent in the terminal mode
-let g:solarized_termtrans = 1
-
 " Set up fonts for GUI mode for different operating systems
 if has("gui_macvim")
       set guifont=Monaco:h13
 endif
 
-source ~/.vim/common_settings.vim
 
 set clipboard=unnamed
 set guifont=Ubuntu\ Mono\ 13
