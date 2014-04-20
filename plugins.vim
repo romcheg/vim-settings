@@ -35,6 +35,7 @@ let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
 let initialized = filereadable(vundle_readme)
 
 if !initialized
+    echom "Configuring your Vim for the firt run..."
     call InstallVundle()
 endif
 
@@ -57,6 +58,7 @@ Bundle 'tpope/vim-fugitive'
 filetype plugin indent on     " required!
 
 if !initialized
-    echom "Installing plugins"
+    echom "Installing plugins..."
     BundleInstall!
 endif
+
