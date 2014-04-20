@@ -20,18 +20,14 @@
 "
 "  0. You just DO WHAT THE FUCK YOU WANT TO.
 
-source ~/.vim/plugins.vim
-source ~/.vim/common_settings.vim
-source ~/.vim/fonts.vim
-source ~/.vim/keys.vim
-source ~/.vim/python.vim
+source ~/.vim/tools.vim
 
-:function! StartUp()
-    if 0 == argc()
-        NERDTree
-    end
-endfunction
+let os = DetectOS()
 
-autocmd VimEnter * call StartUp()
-autocmd TabEnter * call StartUp()
+" Set up fonts for GUI mode for different operating systems
+if os == "Mac"
+    set guifont=Andale\ Mono:h13
+elseif os == "Ubuntu"
+    set guifont=Ubuntu\ Mono\ 13
+endif
 
