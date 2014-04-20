@@ -22,8 +22,23 @@
 
 " This script configures Vundle and specifies required plugins
 
-filetype off                   " required!
+function InstallVundle()
+    " Installs Vundle into user's .vim directory.
+    echo "Installing Vundle.."
+    echo ""
+    silent !mkdir -p ~/.vim/bundle
+    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+endfunction
 
+
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+let initialized = filereadable(vundle_readme)
+
+if !initialized
+    call InstallVundle()
+endif
+
+filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -41,3 +56,7 @@ Bundle 'tpope/vim-fugitive'
 
 filetype plugin indent on     " required!
 
+if !initialized
+    echom "Installing plugins"
+    BundleInstall!
+endif

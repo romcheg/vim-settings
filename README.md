@@ -7,13 +7,10 @@ This repository contains my personal vim settings.
 
 If you want to install the settings just follow the steps:
 
-1. Clone the repository to your home folder and initialize Vundle:
+1. Clone the repository to your home folder:
 
     ```
     git clone https://github.com/romcheg/vim-settings.git ~/.vim
-    cd ~/.vim
-    git submodule init
-    git submodule update
     ```
 
 2. Create a symlink for Vim configuration file:
@@ -22,9 +19,8 @@ If you want to install the settings just follow the steps:
     ln -s ~/.vim/vimrc ~/.vimrc
     ```
 
-3. Now start Vim and skip all the errors.
-4. Run ```:BundleInstall``` to install all required plugins.
-5. Restart Vim and enjoy ;)
+3. Now start Vim and wait until it initialized itself for the first time.
+4. Restart Vim and enjoy ;)
 
 
 ## License
