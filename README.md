@@ -23,6 +23,14 @@ If you want to install the settings just follow the steps:
 3. Enjoy ;)
 
 
+## Upgrade
+
+Basically the upgrade process is simply pulling the changes to your
+local git repository. To do that execute the following:
+
+    cd ~/.vim
+    git pull
+
 ## License
 
 Everything in this repository is distributed AS IS and under WTFPL license.
