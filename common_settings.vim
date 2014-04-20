@@ -20,16 +20,20 @@
 "
 "  0. You just DO WHAT THE FUCK YOU WANT TO.
 
+" System settings
+set nocompatible "do not run in Vi-compatible mode
+set clipboard=unnamed "use system clipboard
+
 " Set common layout options
 colorscheme solarized "set color scheme to Solarized
+let g:solarized_termtrans = 1 "be transparent in the terminal mode
+let NERDTreeIgnore=['\.pyc$'] "don't show .pyc in the Tree
 set background=dark "set dark background
 set cc=79 "show a vertical line on the 79th symbol. Useful for PEP8
 set cursorcolumn "hightlight a column under the cursor
 set cursorline "hightlight a line under the cursor
 set number "switch line number on
 syn on "switch syntax highlight on
-let NERDTreeIgnore=['\.pyc$'] "don't show .pyc in the Tree
-let g:solarized_termtrans = 1 "be transparent in the terminal mode
 
 
 " Set common editing options

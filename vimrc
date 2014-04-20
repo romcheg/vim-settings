@@ -21,9 +21,9 @@
 "  0. You just DO WHAT THE FUCK YOU WANT TO.
 
 source ~/.vim/plugins.vim
-source ~/.vim/python.vim
-source ~/.vim/keys.vim
 source ~/.vim/common_settings.vim
+source ~/.vim/keys.vim
+source ~/.vim/python.vim
 
 :function! StartUp()
     if 0 == argc()
@@ -40,6 +40,5 @@ if has("gui_macvim")
 endif
 
 
-set clipboard=unnamed
 set guifont=Ubuntu\ Mono\ 13
-set nocompatible
+
