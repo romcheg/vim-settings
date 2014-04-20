@@ -20,7 +20,7 @@ If you want to install the settings just follow the steps:
     ```
 
 3. Now start Vim and wait until it initialized itself for the first time.
-4. Restart Vim and enjoy ;)
+4. Enjoy ;)
 
 
 ## License
