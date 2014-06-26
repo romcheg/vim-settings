@@ -22,15 +22,26 @@
 
 " This script configures everything for convenient Python development.
 
-" Enable pylint checking every save
-let g:pymode_lint_write = 1
+" Setting custom hotkeys
 
-" Re-map code completion to Tab key
-let g:pymode_rope_autocomplete_map = '<tab>'
+" Go to assignment
+let g:jedi#goto_assignments_command = "<C-c>g"
 
-" Enable python folding
-let g:pymode_folding = 0
+" Go to definition
+let g:jedi#goto_definitions_command = "<C-c>d"
 
-" Enable virtualenv support
-let g:pymode_virtualenv = 1
+" Find usages
+let g:jedi#usages_command = "<C-c>f"
+
+" Show completion
+let g:jedi#completions_command = "<Tab>"
+
+" Rename
+let g:jedi#rename_command = "<C-c>r"
+
+
+" Other Jedi-Vim settings
+
+" Show call signatures
+let g:jedi#show_call_signatures = "1"
 
