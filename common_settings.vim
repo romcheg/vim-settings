@@ -52,3 +52,5 @@ set guioptions-=L  "remove left-hand scroll bar even from NERDTree
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 
+" Set common options for certain plugins
+autocmd FileType nerdtree setlocal nocursorcolumn

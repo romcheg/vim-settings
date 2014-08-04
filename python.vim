@@ -45,3 +45,5 @@ let g:jedi#rename_command = "<C-c>r"
 " Show call signatures
 let g:jedi#show_call_signatures = "1"
 
+" Do not open stuff in new tabs. It's annoying
+let g:jedi#use_tabs_not_buffers = 0
