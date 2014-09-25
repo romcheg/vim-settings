@@ -53,4 +53,6 @@ set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 
 " Set common options for certain plugins
-autocmd FileType nerdtree setlocal nocursorcolumn
+autocmd FileType nerdtree setlocal nocursorcolumn "don't hightlight selected column in the file tree
+autocmd FileType tagbar setlocal nocursorcolumn "don't hightlight selected column in the TagBar
+
