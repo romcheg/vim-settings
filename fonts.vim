@@ -26,7 +26,7 @@ let os = DetectOS()
 
 " Set up fonts for GUI mode for different operating systems
 if os == "Mac"
-    set guifont=Andale\ Mono:h13
+    set guifont=Inconsolata\ for\ Powerline:h14
 elseif os == "Ubuntu"
     set guifont=Ubuntu\ Mono\ 13
 endif
