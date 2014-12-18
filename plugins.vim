@@ -53,6 +53,7 @@ Bundle 'jimenezrick/vimerl'
 Bundle 'kien/ctrlp.vim'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'majutsushi/tagbar'
+Plugin 'MattesGroeger/vim-bookmarks'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 
