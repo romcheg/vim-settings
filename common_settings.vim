@@ -57,3 +57,8 @@ set guioptions-=r  "remove right-hand scroll bar
 autocmd FileType nerdtree setlocal nocursorcolumn "don't hightlight selected column in the file tree
 autocmd FileType tagbar setlocal nocursorcolumn "don't hightlight selected column in the TagBar
 
+" Bookmarks should be saved per-working directory
+let g:bookmark_save_per_working_dir = 1
+" Enable auto-saving bookmarks
+let g:bookmark_auto_save = 1
+highlight SignColumn ctermfg=none
