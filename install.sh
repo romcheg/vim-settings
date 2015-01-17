@@ -15,24 +15,25 @@
 #  PARTICULAR PURPOSE. You are solely responsible for determining the
 #  appropriateness of using or redistributing the Work and assume any
 #  risks associated with Your exercise of permissions under this License.
-# 
+#
 #             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 #    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-# 
+#
 #   0. You just DO WHAT THE FUCK YOU WANT TO.
 
 # This script clones romcheg's Vim settings and creates all
 # necessary symbolic links.
 
+set -eu
 
 # Defaults
 # ========
-REPO_ADDRESS="https://github.com/romcheg/vim-settings.git"
-VIM_DIRECTORY=~/.vim
-VIMRC=~/.vimrc
-BACKUP_LOCATION=~/vim.old
-GIT_EXECUTABLE=git
-VIM_EXECUTABLE=vim
+REPO_ADDRESS=${REPO_ADDRESS:-"https://github.com/romcheg/vim-settings.git"}
+VIM_DIRECTORY=${VIM_DIRECTORY:-~/.vim}
+VIMRC=${VIMRC:-~/.vimrc}
+BACKUP_LOCATION=${BACKUP_LOCATION:-~/vim.old}
+GIT_EXECUTABLE=${GIT_EXECUTABLE:-'git'}
+VIM_EXECUTABLE=${VIM_EXECUTABLE:-'vim'}
 
 
 # Functions
@@ -43,11 +44,11 @@ VIM_EXECUTABLE=vim
 # script exection, if not available.
 #
 # $1: App executable to run.
-function assert_available {
-    $1 --version 2>&1 >/dev/null 
-    NOT_AVAILABLE=$?
+assert_available() {
+    $1 --version 2>&1 >/dev/null
+    local not_available=$?
 
-    if [ $NOT_AVAILABLE -ne 0 ]; then
+    if [ "$not_available" -ne "0" ]; then
         echo "Please install " $1 " and make sure it is available."
         exit 1
     fi
@@ -56,36 +57,41 @@ function assert_available {
 
 # Clones the settings from the repository and creates a symlink.
 # Assumes that the environment is clean.
-function install {
+install() {
     echo "Obtaining the settings..."
     $GIT_EXECUTABLE clone $REPO_ADDRESS $VIM_DIRECTORY
-    
+
     if [ $? -ne 0 ]; then
         echo "Failed to obtain the settings. Please try again later."
         echo "If you got the error multiple times, please contact the author."
-    
+
         exit 2
     fi
-    
+
     echo "Creating symlinks..."
     ln -s $VIM_DIRECTORY/vimrc $VIMRC
 }
 
 
 # Backs up previous settings.
-function backup {
+backup() {
     echo "Creating a back up..."
 
-    BACKUP_DIR=`mktemp -d $BACKUP_LOCATION.XXX`
-    cp $VIMRC $BACKUP_DIR/
-    cp -r $VIM_DIRECTORY $BACKUP_DIR/
+    backup_dir=$(mktemp -d $BACKUP_LOCATION.XXX)
 
+    if [ -f "$VIMRC" ] || [ -d "$VIMRC" ]; then
+        cp $VIMRC $backup_dir/
+    fi
+
+    if [ -f "$VIM_DIRECTORY" ] || [ -d "$VIM_DIRECTORY" ]; then
+        cp -r $VIM_DIRECTORY $backup_dir/
+    fi
 }
 
 
 # Cleans up a previuos configuration.
-function cleanup {
-    echo "Cheaning up the previous installation."
+cleanup() {
+    echo "Cleaning up the previous installation..."
     rm -rf $VIM_DIRECTORY
     rm -rf $VIMRC
 }
@@ -95,16 +101,17 @@ function cleanup {
 # =====
 assert_available $VIM_EXECUTABLE
 assert_available $GIT_EXECUTABLE
+backup_dir=""
 
 # Detect a previous installation.
-if [ -d $VIM_DIRECTORY ] || [ -f $VIMRC ]; then
+if [ -d "$VIM_DIRECTORY" ] || [ -f "$VIMRC" ]; then
     echo "A previous configuration found."
     echo "You can either stop right now or choose to relpace it with the new one."
     echo "If you choose to continue, the old configuration will be backed up and replaced with the new one."
-    
-    read -p "Would you like to continue (y/N)? " CHOICE < /dev/tty
 
-    case "$CHOICE" in 
+    read -p "Would you like to continue (y/N)? " choice < /dev/tty
+
+    case "$choice" in
       y|Y )
           backup
           cleanup
@@ -128,8 +135,8 @@ echo "=========================================================="
 echo "Vim settings was installed!"
 
 
-if [ -n "$BACKUP_DIR" ]; then
-    echo "Old configuration files were saved to "$BACKUP_DIR
+if [ -n "$backup_dir" ]; then
+    echo "Old configuration files were saved to "$backup_dir
 fi
 
 echo "Now you can run Vim without arguments and let it configure its plugins."
