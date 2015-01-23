@@ -19,8 +19,27 @@ If you want to install the settings just follow the steps:
     wget https://romcheg.me/vim -O - | bash
     ```
 
-2. Now start Vim and wait until it initialized itself for the first time.
-3. Enjoy ;)
+2. If you do not have [exuberant ctags](http://ctags.sourceforge.net) installed
+   it is the perfect time to get it.
+
+   On Ubuntu run:
+
+   ```
+   sudo apt-get install exuberant-ctags
+   ```
+
+   If you have OS X, you could use [Homebrew](http://brew.sh):
+
+   ```
+   brew install ctags
+   ```
+
+   On other distributions of GNU/Linux you should install an appropriate
+   package for getting ctags. Anyway, if you're using Vim, you probably know
+   how to do that ;)
+
+3. Now start Vim and wait until it initialized itself for the first time.
+4. Enjoy ;)
 
 
 ## Upgrade
@@ -30,6 +49,10 @@ local git repository. To do that execute the following:
 
     cd ~/.vim
     git pull
+
+For upgrading Vim's plugins launch it and run
+
+    :BundleInstall!
 
 ## License
 
