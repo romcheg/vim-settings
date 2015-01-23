@@ -10,13 +10,13 @@ If you want to install the settings just follow the steps:
 1. GNU/Linux, OS X, or other unix-like operating system:
 
     ```
-    curl -L http://install_vim.romcheg.me | bash
+    curl -L https://romcheg.me/vim | bash
     ```
 
     or with wget
 
     ```
-    wget --no-check-certificate http://install_vim.romcheg.me -O - | bash
+    wget https://romcheg.me/vim -O - | bash
     ```
 
 2. Now start Vim and wait until it initialized itself for the first time.
