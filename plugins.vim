@@ -49,6 +49,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
+Bundle 'fatih/vim-go'
 Bundle 'jimenezrick/vimerl'
 Bundle 'kien/ctrlp.vim'
 Bundle 'davidhalter/jedi-vim'
