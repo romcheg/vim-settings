@@ -57,6 +57,8 @@ set guioptions-=r  "remove right-hand scroll bar
 " Set common options for certain plugins
 autocmd FileType nerdtree setlocal nocursorcolumn "don't hightlight selected column in the file tree
 autocmd FileType tagbar setlocal nocursorcolumn "don't hightlight selected column in the TagBar
+autocmd filetype crontab setlocal nobackup nowritebackup " don't create backups for crontab
+let g:bookmark_save_per_working_dir = 1 " bookmarks should be saved per-working directory
+let g:bookmark_auto_save = 1 " enable auto-saving bookmarks
 
-" Don't create backups for crontab
-autocmd filetype crontab setlocal nobackup nowritebackup
+highlight SignColumn ctermfg=none
