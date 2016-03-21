@@ -42,8 +42,8 @@ let g:jedi#rename_command = "<C-c>r"
 
 " Other Jedi-Vim settings
 
-" Show call signatures
-let g:jedi#show_call_signatures = "1"
+" Show call signatures in a command line to avoid undo issues
+let g:jedi#show_call_signatures = "0"
 
 " Do not open stuff in new tabs. It's annoying
 let g:jedi#use_tabs_not_buffers = 0
