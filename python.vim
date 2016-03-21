@@ -47,3 +47,6 @@ let g:jedi#show_call_signatures = "0"
 
 " Do not open stuff in new tabs. It's annoying
 let g:jedi#use_tabs_not_buffers = 0
+
+" Always select first line in the completion pop-up
+let g:jedi#popup_select_first = 1
