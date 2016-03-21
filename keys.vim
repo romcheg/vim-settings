@@ -22,4 +22,5 @@
 
 " Don't remember what is this for...
 imap <buffer><Tab> <M-/>
+nmap <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
