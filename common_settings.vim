@@ -23,6 +23,7 @@
 " System settings
 set nocompatible "do not run in Vi-compatible mode
 set clipboard=unnamed "use system clipboard
+set t_Co=256
 
 " Set common layout options
 colorscheme solarized "set color scheme to Solarized
