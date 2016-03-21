@@ -58,3 +58,5 @@ set guioptions-=r  "remove right-hand scroll bar
 autocmd FileType nerdtree setlocal nocursorcolumn "don't hightlight selected column in the file tree
 autocmd FileType tagbar setlocal nocursorcolumn "don't hightlight selected column in the TagBar
 
+" Don't create backups for crontab
+autocmd filetype crontab setlocal nobackup nowritebackup
