@@ -29,7 +29,7 @@ set t_Co=256
 colorscheme solarized "set color scheme to Solarized
 let g:solarized_termtrans = 1 "be transparent in the terminal mode
 let g:airline_powerline_fonts = 1 "use fancy fonts for vim-airline
-let NERDTreeIgnore=['\.pyc$'] "don't show .pyc in the Tree
+let NERDTreeIgnore=['\.pyc$', '__pycache__$'] "don't show .pyc in the Tree
 set background=dark "set dark background
 set cc=79 "show a vertical line on the 79th symbol. Useful for PEP8
 set cursorcolumn "hightlight a column under the cursor
