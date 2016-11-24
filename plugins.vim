@@ -47,18 +47,20 @@ call vundle#rc()
 " required!
 Bundle 'gmarik/vundle'
 
+Bundle 'MattesGroeger/vim-bookmarks'
+Bundle 'Shougo/neocomplete.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
+Bundle 'davidhalter/jedi-vim'
 Bundle 'dhruvasagar/vim-table-mode'
 Bundle 'fatih/vim-go'
 Bundle 'jimenezrick/vimerl'
+Bundle 'keith/swift.vim'
 Bundle 'kien/ctrlp.vim'
-Bundle 'davidhalter/jedi-vim'
 Bundle 'majutsushi/tagbar'
-Plugin 'MattesGroeger/vim-bookmarks'
 Bundle 'scrooloose/nerdtree'
-Bundle 'Shougo/neocomplete.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'vim-syntastic/syntastic'
 
 filetype plugin indent on     " required!
 
