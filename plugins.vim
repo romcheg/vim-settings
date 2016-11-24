@@ -49,16 +49,16 @@ Bundle 'gmarik/vundle'
 
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
+Bundle 'davidhalter/jedi-vim'
 Bundle 'fatih/vim-go'
 Bundle 'jimenezrick/vimerl'
 Bundle 'keith/swift.vim'
 Bundle 'kien/ctrlp.vim'
-Bundle 'davidhalter/jedi-vim'
 Bundle 'majutsushi/tagbar'
-Plugin 'MattesGroeger/vim-bookmarks'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-syntastic/syntastic'
+Plugin 'MattesGroeger/vim-bookmarks'
 
 filetype plugin indent on     " required!
 
