@@ -57,6 +57,7 @@ Bundle 'majutsushi/tagbar'
 Plugin 'MattesGroeger/vim-bookmarks'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
+Bundle 'vim-syntastic/syntastic'
 
 filetype plugin indent on     " required!
 
