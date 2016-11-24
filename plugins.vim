@@ -57,6 +57,7 @@ Bundle 'davidhalter/jedi-vim'
 Bundle 'majutsushi/tagbar'
 Plugin 'MattesGroeger/vim-bookmarks'
 Bundle 'scrooloose/nerdtree'
+Bundle 'Shougo/neocomplete.vim'
 Bundle 'tpope/vim-fugitive'
 
 filetype plugin indent on     " required!
