@@ -59,9 +59,11 @@ Bundle 'keith/swift.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'landaire/deoplete-swift'
 Bundle 'majutsushi/tagbar'
+Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-syntastic/syntastic'
+Bundle 'zchee/deoplete-jedi'
 
 filetype plugin indent on     " required!
 
