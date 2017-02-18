@@ -24,3 +24,4 @@
 imap <buffer><Tab> <M-/>
 nmap <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
+nmap <Esc><Esc> :noh<Enter>

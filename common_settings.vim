@@ -25,6 +25,10 @@ set nocompatible "do not run in Vi-compatible mode
 set clipboard=unnamed "use system clipboard
 set t_Co=256
 
+
+" Set common control options
+set mouse=
+
 " Set common layout options
 colorscheme solarized "set color scheme to Solarized
 let g:solarized_termtrans = 1 "be transparent in the terminal mode
