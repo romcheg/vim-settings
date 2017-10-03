@@ -66,3 +66,11 @@ let g:bookmark_save_per_working_dir = 1 " bookmarks should be saved per-working 
 let g:bookmark_auto_save = 1 " enable auto-saving bookmarks
 
 highlight SignColumn ctermfg=none
+
+
+" vim-notes
+let g:notes_directories = ['.notes']
+
+" pretty tables
+let g:table_mode_corner_corner='+'
+let g:table_mode_header_fillchar='='
