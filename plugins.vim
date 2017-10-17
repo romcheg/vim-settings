@@ -48,7 +48,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'MattesGroeger/vim-bookmarks'
-Bundle 'Shougo/neocomplete.vim'
+Bundle 'Shougo/deoplete.nvim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
 Bundle 'davidhalter/jedi-vim'
@@ -65,6 +65,7 @@ Bundle 'rust-lang/rust.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-syntastic/syntastic'
+Bundle 'zchee/deoplete-go'
 Bundle 'zchee/deoplete-jedi'
 
 filetype plugin indent on     " required!
