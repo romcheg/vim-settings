@@ -46,9 +46,7 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
-
 Bundle 'MattesGroeger/vim-bookmarks'
-Bundle 'Shougo/neocomplete.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
 Bundle 'davidhalter/jedi-vim'
@@ -64,7 +62,13 @@ Bundle 'posva/vim-vue'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-syntastic/syntastic'
+Bundle 'zchee/deoplete-go'
 Bundle 'zchee/deoplete-jedi'
+
+
+if !has('nvim')
+    Bundle 'Shougo/neocomplete.vim'
+endif
 
 filetype plugin indent on     " required!
 
