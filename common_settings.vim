@@ -22,9 +22,11 @@
 
 " System settings
 set nocompatible "do not run in Vi-compatible mode
-set clipboard=unnamed "use system clipboard
 set t_Co=256
 
+if $TMUX == ''
+    set clipboard=unnamed "use system clipboard
+endif
 
 " Set common control options
 set mouse=
