@@ -26,4 +26,5 @@ source ~/.vim/common_settings.vim
 source ~/.vim/fonts.vim
 source ~/.vim/keys.vim
 source ~/.vim/python.vim
+source ~/.vim/puppet.vim
 
