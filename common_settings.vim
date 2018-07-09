@@ -24,9 +24,15 @@
 set nocompatible "do not run in Vi-compatible mode
 set t_Co=256
 
-if $TMUX == ''
-    set clipboard=unnamed "use system clipboard
+" Use system clipboard
+if has("nvim")
+    set clipboard+=unnamedplus
+else
+    if $TMUX == ''
+        set clipboard=unnamed
+    endif
 endif
+
 
 " Set common control options
 set mouse=
